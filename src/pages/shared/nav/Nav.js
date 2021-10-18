@@ -7,8 +7,8 @@ function Nav() {
     const [isOpen, setIsOpen] = useState(false);
     const classForMobile = "hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium";
     return (
-        <div>
-            <nav className="bg-gray-800">
+        <div >
+            <nav className="bg-gray-800 w-screen fixed">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex flex-auto items-center">
