@@ -1,8 +1,11 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
+import useAuth from '../../../hooks/useAuth';
 
 const NavLink = ({ myClass = null }) => {
+    const { allContext } = useAuth();
+    const { user, logOut } = allContext;
     let myModifiedClass = myClass ? myClass : "hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium";
     return (
         <div>
@@ -20,14 +23,28 @@ const NavLink = ({ myClass = null }) => {
                 About
             </Link>
 
-            <Link
+            {user.email ? <><Link
                 to="/doctors"
                 className={myModifiedClass}
             >
                 Our Doctors
             </Link>
 
-            <Link
+                <button onClick={logOut} className={myModifiedClass}>Logout</button>
+            </> : <> <Link
+                to="/login"
+                className={myModifiedClass}
+            >
+                login
+            </Link>
+                <Link
+                    to="/register"
+                    className={myModifiedClass}
+                >
+                    Sign up
+                </Link></>}
+
+            {/* <Link
                 to="/departments"
                 className={myModifiedClass}
             >
@@ -39,7 +56,7 @@ const NavLink = ({ myClass = null }) => {
                 className={myModifiedClass}
             >
                 Contact
-            </Link>
+            </Link> */}
         </div>
     )
 }

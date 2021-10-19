@@ -1,26 +1,48 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import AuthContext from "./AuthContext/AuthContext";
 import Home from "./pages/Home/Home";
+import Login from "./pages/login/Login";
 import Notfound from "./pages/notFound/Notfound";
+import Register from "./pages/Register/Register";
+import Servies from "./pages/Services/Servies";
+
+import Single from "./pages/Services/Single/Single";
+import Footer from "./pages/shared/Footer/Footer";
 import Header from "./pages/shared/Header/Header";
+import PrivateRoute from "./privateRoute/PrivateRoute";
 
 
 function App() {
   return (
-    <Router>
-      <Header></Header>
-      <Switch>
-        <Route exact path="/" component={Home}></Route>
-        <Route exact path="/home" component={Home}></Route>
-
-
-
-
-
-
-
-        <Route exact path="*" component={Notfound}></Route>
-      </Switch>
-    </Router>
+    <AuthContext>
+      <BrowserRouter>
+        <Header></Header>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
+          <PrivateRoute path="/services">
+            <Servies></Servies>
+          </PrivateRoute>
+          <PrivateRoute path="/service/:serviceId">
+            <Single></Single>
+          </PrivateRoute>
+          <Route path="*">
+            <Notfound></Notfound>
+          </Route>
+        </Switch>
+        <Footer></Footer>
+      </BrowserRouter>
+    </AuthContext >
   );
 }
 

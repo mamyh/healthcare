@@ -25,13 +25,13 @@
     },
     {
         "id": 5,
-        "name": "Health Monitoring and care",
+        "name": "Health Monitoring",
         "img": "../images/services/health-monitor.jpg",
         "desc": "We provide regular health checkups by doctor includes: Assessments of blood pressure, cholesterol level, weight, Blood, urine, vision, and hearing tests to evaluate overall health."
     },
     {
         "id": 6,
-        "name": "Pain Management and BP Check",
+        "name": "Pain Management ",
         "img": "../images/services/pain-manag.jpg",
         "desc": "There are many treatment options like Lifestyle changes, physical therapy, counseling – in addition to medication or surgery, these can also bring pain relief. Get treated in the comfort of your home, by certified, specialized and experienced physiotherapists."
     }
