@@ -5,7 +5,7 @@ import useAuth from '../hooks/useAuth';
 const PrivateRoute = ({ children, ...rest }) => {
     let { allContext } = useAuth();
     const { user } = allContext;
-    console.log(user);
+
     return (
         <Route
             {...rest}

@@ -19,14 +19,14 @@ const useFirebase = () => {
     useEffect(() => {
         const unSubscriber = onAuthStateChanged(auth, user => {
             if (user) {
-                var user = auth.currentUser;
-                setUser(user);
+                var newUser = auth.currentUser;
+                setUser(newUser);
             } else {
 
             }
         })
         return unSubscriber();
-    }, []);
+    }, [auth]);
     return {
         user, error, signInWithGoogle, logOut
     }

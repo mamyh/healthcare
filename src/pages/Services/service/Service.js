@@ -6,7 +6,7 @@ const Service = ({ service }) => {
     return (
         <div className="mx-16 mb-16 hover:shadow-md border border-gray-300 rounded-lg ">
             <div className="">
-                <img src={img} alt="" />
+                <img className=" w-full h-full" src={img} alt="" />
             </div>
             <div className="p-8">
                 <h1 className="text-2xl text-yellow-300 font-bold pb-8">{name.slice(0, 10)}</h1>
