@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import useAuth from '../../hooks/useAuth'
 
 const Register = () => {
+    const { allContext } = useAuth();
+    const { user, error, registration } = allContext;
     return (
         <div className="h-screen md:flex items-center justify-center">
             <div className=" bg-yellow-100 p-20 border hover:shadow-md border-gray-300">
@@ -22,8 +25,9 @@ const Register = () => {
                     <input className="bg-white border p-2 border-gray-300" type="password" id="cpassword" placeholder="your password" />
                     <div className="text-right py-4 ">
 
-                        <input type="submit" className="px-4 text-white bg-yellow-500 rounded-md " value="Login" />
+                        <input type="submit" className="px-4 text-white bg-yellow-500 rounded-md " value="Register" />
                     </div>
+                    <div className="text-red-400">{error}</div>
                 </form>
                 <div>Have an account ? <Link to="/login">Login</Link></div>
             </div >

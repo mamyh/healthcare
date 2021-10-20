@@ -4,8 +4,17 @@ import useAuth from '../hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
     let { allContext } = useAuth();
-    const { user } = allContext;
+    const { user, isLoading } = allContext;
+    if (isLoading) {
+        return (
+            <button type="button" class="bg-rose-600 ..." disabled>
+                <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
 
+                </svg>
+
+            </button>
+        )
+    }
     return (
         <Route
             {...rest}
