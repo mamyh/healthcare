@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AuthContext from "./AuthContext/AuthContext";
+import About from "./pages/about/About";
 import Doctors from "./pages/doctors/Doctors";
 import SingleDoctor from "./pages/doctors/singleDocter/SingleDoctor";
 import Home from "./pages/Home/Home";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
+          <Route path="/about" component={About}></Route>
           <Route path="/login">
             <Login></Login>
           </Route>

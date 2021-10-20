@@ -10,14 +10,18 @@ const SingleDoctor = () => {
 
     const { name, img, desc, profession } = doctor;
     return (
-        <div>
+        <div className="  md:h-screen  md:flex items-center justify-center">
+            <div className=" hover:shadow-md md:mt-12 md:w-1/3 bg-yellow-100">
 
-            <div>
-                <img src={img} alt="" />
+                <div className=" w-full">
+                    <img className="w-full" src={img} alt="" />
+                </div>
+                <div className="p-5 space-y-2">
+                    <h1 className="text-2xl ">doctor name : {name}</h1>
+                    <p >Profession:{profession}</p>
+                    <p>{desc}</p>
+                </div>
             </div>
-            <h1>doctor name : {name}</h1>
-            <p>Profession:{profession}</p>
-            <p>{desc}</p>
 
         </div>
     )
