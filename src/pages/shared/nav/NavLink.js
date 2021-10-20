@@ -23,12 +23,19 @@ const NavLink = ({ myClass = null }) => {
                 About
             </Link>
 
-            {user.email ? <><Link
-                to="/doctors"
-                className={myModifiedClass}
-            >
-                Our Doctors
-            </Link>
+            {user.email ? <>
+                <Link
+                    to="/doctors"
+                    className={myModifiedClass}
+                >
+                    Our Doctors
+                </Link>
+                <Link
+                    to="/services"
+                    className={myModifiedClass}
+                >
+                    Our services
+                </Link>
 
                 <button onClick={logOut} className={myModifiedClass}>Logout</button>
             </> : <> <Link

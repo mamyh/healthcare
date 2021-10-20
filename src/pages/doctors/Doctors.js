@@ -5,10 +5,9 @@ import Doctor from './Doctor/Doctor';
 const Doctors = () => {
     const { doctors } = useAuth();
 
-    console.log(doctors)
 
     return (
-        <div className="md:grid grid-cols-2 gap-10 pt-32">
+        <div className="md:grid grid-cols-2 gap-10 pt-32 mx-20">
             {doctors.map(doctor => <Doctor key={doctor.id} doctor={doctor}></Doctor>)}
         </div>
     )

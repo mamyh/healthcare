@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AuthContext from "./AuthContext/AuthContext";
 import Doctors from "./pages/doctors/Doctors";
+import SingleDoctor from "./pages/doctors/singleDocter/SingleDoctor";
 import Home from "./pages/Home/Home";
 import Login from "./pages/login/Login";
 import Notfound from "./pages/notFound/Notfound";
@@ -36,6 +37,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/service/:serviceId">
             <Single></Single>
+          </PrivateRoute>
+          <PrivateRoute path="/doctor/:doctorId">
+            <SingleDoctor></SingleDoctor>
           </PrivateRoute>
           <PrivateRoute path="/doctors"> <Doctors></Doctors></PrivateRoute>
           <Route path="*">

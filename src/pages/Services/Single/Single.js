@@ -4,8 +4,10 @@ import useAuth from '../../../hooks/useAuth';
 
 const Single = () => {
     const { services } = useAuth();
-    const serviceId = useParams();
-    const service = services.find(service => serviceId === service.id);
+    const { serviceId } = useParams();
+
+    const service = services.find(service => serviceId === service.id.toString());
+
     const { name, img, desc } = service;
     return (
         <div>
