@@ -2,9 +2,21 @@ import React from 'react'
 import useAuth from '../../hooks/useAuth';
 import Service from './service/Service';
 
-const Servies = () => {
-    const { services } = useAuth();
+const Services = () => {
+    const { allServices } = useAuth();
+    const { services, isLoading } = allServices;
+    console.log(services, isLoading);
+    if (isLoading) {
+        return (
+            <button type="button" className="bg-rose-600" disabled>
+                <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
 
+                </svg>
+
+            </button>
+        )
+    }
+    console.log(services, isLoading);
     return (
         <div className="text-center">
             <h1 className="text-2xl  inline-block md:text-center font-bold text-yellow-300 border-current border-b-2">Our services</h1>
@@ -15,4 +27,4 @@ const Servies = () => {
     )
 }
 
-export default Servies
+export default Services;

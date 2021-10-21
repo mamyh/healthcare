@@ -8,7 +8,7 @@ const Login = () => {
     const history = useHistory();
     const redirectPath = state?.from.pathname || '/home';
 
-    const { signInWithGoogle } = allContext;
+    const { signInWithGoogle, login } = allContext;
     const handleLogin = () => {
         signInWithGoogle().finally(() => history.push(redirectPath));
     }

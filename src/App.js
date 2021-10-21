@@ -7,7 +7,7 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/login/Login";
 import Notfound from "./pages/notFound/Notfound";
 import Register from "./pages/Register/Register";
-import Servies from "./pages/Services/Servies";
+import Services from "./pages/Services/Services";
 import Single from "./pages/Services/Single/Single";
 import Footer from "./pages/shared/Footer/Footer";
 import Header from "./pages/shared/Header/Header";
@@ -35,7 +35,7 @@ function App() {
             <Register></Register>
           </Route>
           <PrivateRoute path="/services">
-            <Servies></Servies>
+            <Services></Services>
           </PrivateRoute>
           <PrivateRoute path="/service/:serviceId">
             <Single></Single>

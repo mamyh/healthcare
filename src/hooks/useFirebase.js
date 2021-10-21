@@ -18,7 +18,7 @@ const useFirebase = () => {
     }
 
     const login = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password).then(result => setUser(result.user)).catch(error => setError(error.message));
+        return signInWithEmailAndPassword(auth, email, password).then(result => setUser(result.user)).catch(error => setError(error.message));
     }
 
     const logOut = () => {
