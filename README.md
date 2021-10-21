@@ -14,6 +14,8 @@
 - private route 
 - page redirect 
 - responsive design 
+- tailwind css 
+
 ---------------------------------------------------
 ##'learnig'
   i have learnt so much thing to make this site 
