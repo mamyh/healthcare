@@ -1,9 +1,9 @@
 #`My Health care React application `
  
- live demo is [link]https://healthcarereactassignments.netlify.app/
+ live demo is [ link ]https://healthcarereactassignments.netlify.app/
 
 ------------------------------
- #'used technology '
+ #`used technology `
 -----------------------------
  - firebase authentication 
      - with Google account 
