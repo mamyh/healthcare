@@ -4,7 +4,7 @@ const useDoctor = () => {
     const [doctors, setDoctors] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
-        fetch('./doctors.json').then(res => res.json()).then(data => setDoctors(data)).finally(() => setIsLoading(false));
+        fetch('./../doctors.json').then(res => res.json()).then(data => setDoctors(data)).finally(() => setIsLoading(false));
     }, []);
 
     return { doctors, isLoading };

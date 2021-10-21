@@ -8,10 +8,10 @@ export const Context = createContext();
 const AuthContext = ({ children }) => {
     const allContext = useFirebase();
     const allServices = useService();
-    const doctors = useDoctor();
+    const allDoctors = useDoctor();
 
     return (
-        <Context.Provider value={{ allContext, allServices, doctors }} >
+        <Context.Provider value={{ allContext, allServices, allDoctors }} >
             {children}
         </Context.Provider >
     )

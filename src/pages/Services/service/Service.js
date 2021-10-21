@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Service = ({ service }) => {
     const { id, name, img, desc } = service;
     return (
-        <div className="mx-16 mb-16 hover:shadow-md border border-gray-300 rounded-lg ">
+        <div className="md:mx-16 mb-16 hover:shadow-md border border-gray-300 rounded-lg ">
             <div className="">
                 <img className=" w-full h-full" src={img} alt="" />
             </div>

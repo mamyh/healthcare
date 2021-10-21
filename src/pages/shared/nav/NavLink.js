@@ -36,7 +36,12 @@ const NavLink = ({ myClass = null }) => {
                 >
                     Our services
                 </Link>
-
+                <Link
+                    to="/"
+                    className={myModifiedClass}
+                >
+                    {user.displayName}
+                </Link>
                 <button onClick={logOut} className={myModifiedClass}>Logout</button>
             </> : <> <Link
                 to="/login"

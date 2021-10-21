@@ -14,10 +14,10 @@ const useFirebase = () => {
     }
 
     const registration = (email, password, name) => {
-        createUserWithEmailAndPassword(auth, email, password).then((result) => { setUser(result.user); updateProfile(auth.currentUser, { displayName: name }) }).catch((error) => setError(error.message));
+        return createUserWithEmailAndPassword(auth, email, password).then((result) => { setUser(result.user); updateProfile(auth.currentUser, { displayName: name }) }).catch((error) => setError(error.message));
     }
 
-    const login = (email, password) => {
+    const loginWithEmailPassword = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password).then(result => setUser(result.user)).catch(error => setError(error.message));
     }
 
@@ -40,7 +40,7 @@ const useFirebase = () => {
         return () => unSubscriber;
     }, [auth]);
     return {
-        user, isLoading, error, registration, login, signInWithGoogle, logOut
+        user, isLoading, error, registration, loginWithEmailPassword, signInWithGoogle, logOut
     }
 }
 
